@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wantedDtl>
+  <resultCode>0</resultCode>
+  <resultMessage>SUCCESS</resultMessage>
+  <servId>WLF00001000</servId>
+  <servNm>한부모가족 아동양육비 지원</servNm>
+  <jurMnofNm>여성가족부</jurMnofNm>
+  <jurOrgNm>여성가족부 가족지원과</jurOrgNm>
+  <wlfareInfoOutlCn>저소득 한부모가족 및 조손가족이 안정적으로 자녀를 양육할 수 있도록 18세 미만 아동에 대한 아동양육비 등을 지원하는 제도입니다.</wlfareInfoOutlCn>
+  <tgtrDtlCn>소득인정액이 기준 중위소득 이하인 한부모가족·조손가족의 만 18세 미만(취학 시 만 22세 미만) 자녀. 이혼·사별 등으로 한부모가 된 가구를 포함합니다.</tgtrDtlCn>
+  <slctCritCn>가구 소득인정액 및 가구원 수 기준으로 선정하며, 정확한 소득기준 충족 여부는 신청 후 기관 심사로 확정됩니다.</slctCritCn>
+  <alwServCn>자녀 1인당 월 아동양육비를 지급하며, 추가 아동양육비·학용품비 등 부가급여가 함께 지원될 수 있습니다.</alwServCn>
+  <aplyMtdCn>주소지 관할 읍면동 주민센터 방문 또는 복지로 온라인 신청. 한부모가족 증명서 발급 신청과 함께 진행할 수 있습니다.</aplyMtdCn>
+  <applmetList>
+    <servSeNm>방문 신청</servSeNm>
+    <servSeDetailNm>주소지 관할 읍면동 주민센터</servSeDetailNm>
+    <servSeDetailLink>https://www.bokjiro.go.kr/</servSeDetailLink>
+  </applmetList>
+  <applmetList>
+    <servSeNm>온라인 신청</servSeNm>
+    <servSeDetailNm>복지로 온라인 신청</servSeDetailNm>
+    <servSeDetailLink>https://www.bokjiro.go.kr/</servSeDetailLink>
+  </applmetList>
+  <inqplCtadrList>
+    <wlfareInfoDtlCd>한부모상담전화</wlfareInfoDtlCd>
+    <inqDocCn>1644-6621</inqDocCn>
+  </inqplCtadrList>
+  <inqplCtadrList>
+    <wlfareInfoDtlCd>보건복지상담센터</wlfareInfoDtlCd>
+    <inqDocCn>129</inqDocCn>
+  </inqplCtadrList>
+  <inqplHmpgReldList>
+    <wlfareInfoReldNm>복지로</wlfareInfoReldNm>
+    <wlfareInfoReldCn>https://www.bokjiro.go.kr/</wlfareInfoReldCn>
+  </inqplHmpgReldList>
+  <rprsCtadr>1644-6621</rprsCtadr>
+  <servDtlLink>https://www.bokjiro.go.kr/</servDtlLink>
+</wantedDtl>

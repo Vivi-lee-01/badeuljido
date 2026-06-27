@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>받을지도 시안 — Soft Pastel Care</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+<style>
+  /* 시안 3 — Soft Pastel Care (따뜻한 크림 + 코랄/세이지 파스텔 + 둥근 톤 + 다정한 결) */
+  :root{
+    --cream:#fdf8f3; --paper:#fffdfb; --coral:#ef835f; --coral-bg:#fdeee7;
+    --sage:#7faa86; --sage-bg:#ecf3ee; --line:#efe6da; --ink:#3a322c; --slate:#8a7f74;
+    --ok:#5a9a6f; --ok-bg:#ecf4ee; --mid:#d89048; --mid-bg:#fbf0e2;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:"Pretendard",system-ui,sans-serif;letter-spacing:-.01em;line-height:1.6;}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px;}
+  nav{display:flex;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto;padding:20px 24px;}
+  .brand{font-weight:800;font-size:21px;color:var(--coral);}
+  .nav-cta{background:var(--coral);color:#fff;border:none;border-radius:100px;padding:11px 22px;font:inherit;font-weight:700;font-size:14px;cursor:pointer;}
+  /* hero */
+  .hero{display:grid;grid-template-columns:1fr .85fr;gap:36px;align-items:center;padding:24px 0 48px;}
+  .eyebrow{display:inline-block;background:var(--sage-bg);color:var(--sage);font-weight:700;font-size:13px;padding:8px 16px;border-radius:100px;margin-bottom:18px;}
+  h1{font-size:50px;font-weight:800;letter-spacing:-.03em;line-height:1.12;margin:0 0 16px;}
+  h1 .hl{color:var(--coral);}
+  .hero-sub{font-size:17px;color:var(--slate);max-width:460px;margin:0 0 24px;}
+  .input-card{background:var(--paper);border:1px solid var(--line);border-radius:26px;padding:22px;box-shadow:0 14px 40px rgba(239,131,95,.10);}
+  textarea{width:100%;min-height:118px;border:1.5px solid var(--line);border-radius:18px;padding:16px;font:inherit;font-size:16px;resize:vertical;outline:none;background:var(--cream);}
+  textarea:focus{border-color:var(--coral);}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 16px;}
+  .chip{border:1.5px solid var(--line);background:var(--paper);border-radius:100px;padding:8px 15px;font-weight:600;font-size:13px;cursor:pointer;color:var(--ink);}
+  .chip:hover{border-color:var(--coral);color:var(--coral);}
+  .cta{background:var(--coral);color:#fff;border:none;border-radius:100px;padding:15px 24px;font:inherit;font-weight:800;font-size:16px;cursor:pointer;width:100%;box-shadow:0 8px 20px rgba(239,131,95,.28);}
+  .hero-art{height:380px;border-radius:30px;overflow:hidden;position:relative;background:linear-gradient(160deg,#fbe3d6,#ecf3ee);}
+  .hero-art img{width:100%;height:100%;object-fit:cover;mix-blend-mode:multiply;opacity:.92;}
+  .blob{position:absolute;border-radius:50%;}
+  .blob.a{width:90px;height:90px;background:var(--coral);opacity:.85;top:-20px;left:-20px;}
+  .blob.b{width:60px;height:60px;background:var(--sage);opacity:.85;bottom:24px;right:-12px;}
+  /* workspace */
+  .sec-title{font-size:34px;font-weight:800;margin:8px 0 4px;}
+  .sec-lead{color:var(--slate);margin:0 0 28px;}
+  .work{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start;padding-bottom:64px;}
+  .understand{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;}
+  .tag{background:var(--paper);border:1px solid var(--line);border-radius:100px;padding:7px 13px;font-size:13px;font-weight:600;}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:22px;margin-bottom:16px;box-shadow:0 6px 18px rgba(58,50,44,.04);}
+  .top{display:flex;align-items:center;gap:10px;margin-bottom:4px;}
+  .rank{width:30px;height:30px;border-radius:12px;background:var(--coral);color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;}
+  .name{font-size:19px;font-weight:800;}
+  .cat{margin-left:auto;background:var(--sage-bg);color:var(--sage);border-radius:100px;padding:6px 12px;font-size:12px;font-weight:700;}
+  .agency{color:var(--slate);font-size:14px;margin:2px 0 8px;}
+  .summary{font-size:15px;margin-bottom:16px;}
+  .row{display:flex;align-items:center;justify-content:space-between;gap:10px;}
+  .badge{font-weight:800;font-size:13px;padding:8px 14px;border-radius:100px;}
+  .badge.h{background:var(--ok-bg);color:var(--ok);}
+  .badge.m{background:var(--mid-bg);color:var(--mid);}
+  .ghost{border:1.5px solid var(--coral);background:#fff;color:var(--coral);border-radius:100px;padding:10px 18px;font:inherit;font-weight:700;font-size:14px;cursor:pointer;}
+  .packet{background:var(--paper);border:1px solid var(--line);border-radius:26px;padding:26px;box-shadow:0 14px 40px rgba(239,131,95,.08);}
+  .packet h3{font-size:25px;font-weight:800;margin:0 0 4px;}
+  .secb{margin-top:18px;}
+  .secb .lbl{font-weight:800;font-size:13px;color:var(--coral);margin-bottom:6px;}
+  .secb p{margin:0;font-size:14px;color:var(--ink);}
+  .draft{background:var(--sage-bg);border-radius:16px;padding:15px;font-size:14px;white-space:pre-wrap;margin-bottom:10px;}
+  .copy{border:1.5px solid var(--sage);background:#fff;color:var(--sage);border-radius:100px;padding:9px 16px;font-weight:700;font-size:13px;cursor:pointer;}
+  .dl{display:flex;gap:10px;margin-top:10px;}
+  .dl .cta{width:auto;flex:1;padding:13px 18px;}
+  @media(max-width:880px){.hero,.work{grid-template-columns:1fr;}h1{font-size:38px;}.hero-art{height:240px;}}
+</style>
+</head>
+<body>
+  <nav><div class="brand">받을지도 ♥</div><button class="nav-cta">시작하기</button></nav>
+  <div class="wrap">
+    <section class="hero">
+      <div>
+        <span class="eyebrow">복지 길찾기 · AI 코파일럿</span>
+        <h1>받을 수 있는지,<br/><span class="hl">같이 찾아봐요</span></h1>
+        <p class="hero-sub">제도명을 몰라도 괜찮아요. 지금 상황만 편하게 적어주시면, 받을 가능성이 있는 복지서비스를 찾아 신청 준비까지 다정하게 함께할게요.</p>
+        <div class="input-card">
+          <textarea>서울에 사는 33세 프리랜서입니다. 최근 일이 줄어 월소득이 90만원 수준으로 떨어졌어요. 구직·생계가 막막합니다.</textarea>
+          <div class="chips"><span class="chip">예시 입력 (발표용)</span><span class="chip">8살 딸 미혼모…</span><span class="chip">65세 어르신…</span></div>
+          <button class="cta">받을지도 찾기 →</button>
+        </div>
+      </div>
+      <div class="hero-art"><div class="blob a"></div><img src="/hero-warm.png" alt="따뜻한 이미지"/><div class="blob b"></div></div>
+    </section>
+    <h2 class="sec-title">받을지도 추천</h2>
+    <p class="sec-lead">입력하신 상황을 바탕으로, 받을 가능성이 높은 순으로 골라봤어요.</p>
+    <section class="work">
+      <div>
+        <div class="understand"><span class="tag">지역: 서울</span><span class="tag">나이: 33세</span><span class="tag">상황: 프리랜서</span><span class="tag">월소득: 약 90만원</span><span class="tag">#구직</span><span class="tag">#생계</span></div>
+        <div class="card"><div class="top"><span class="rank">1</span><span class="name">국민취업지원제도</span><span class="cat">일자리</span></div><div class="agency">고용노동부</div><div class="summary">구직활동 지원 + 구직촉진수당(월 50만원×최대 6개월)을 지원합니다.</div><div class="row"><span class="badge h">지원 가능성 · 높음</span><button class="ghost">신청 준비하기</button></div></div>
+        <div class="card"><div class="top"><span class="rank">2</span><span class="name">긴급복지지원</span><span class="cat">생계·생활</span></div><div class="agency">보건복지부</div><div class="summary">갑작스러운 위기 상황으로 생계가 곤란한 가구에 생계비를 신속 지원합니다.</div><div class="row"><span class="badge m">지원 가능성 · 중간</span><button class="ghost">신청 준비하기</button></div></div>
+        <div class="card"><div class="top"><span class="rank">3</span><span class="name">청년월세 특별지원</span><span class="cat">주거</span></div><div class="agency">국토교통부</div><div class="summary">무주택 청년에게 월 최대 20만원의 월세를 최대 12개월 지원합니다.</div><div class="row"><span class="badge m">지원 가능성 · 중간</span><button class="ghost">신청 준비하기</button></div></div>
+      </div>
+      <div class="packet">
+        <h3>국민취업지원제도</h3>
+        <div class="agency">고용노동부 · <span class="badge h" style="padding:5px 11px;">지원 가능성 · 높음</span></div>
+        <div class="secb"><div class="lbl">추천 이유</div><p>프리랜서·저소득 구직자 요건에 부합해요. 월소득 90만원 수준은 Ⅰ유형 소득기준 검토 대상이에요.</p></div>
+        <div class="secb"><div class="lbl">지원 가능성 및 확인할 점</div><p>· 가구 소득·재산 기준 확인<br/>· 최근 2년 100일 이상 취업 경험<br/>· 거주지 고용센터 또는 워크넷 신청</p></div>
+        <div class="secb"><div class="lbl">신청 문장 초안</div>
+          <div class="draft">안녕하세요. 서울 거주 33세 프리랜서로, 최근 소득이 월 90만원 수준으로 줄어 국민취업지원제도 신청을 문의드립니다. 구직촉진수당 지원 대상 여부를 확인하고 싶습니다.</div>
+          <button class="copy">신청 문장 복사</button>
+        </div>
+        <div class="dl"><button class="cta">공식 신청 바로가기 →</button><button class="ghost">준비 메모 받기</button></div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

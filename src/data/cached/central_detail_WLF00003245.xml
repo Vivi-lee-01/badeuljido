@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wantedDtl>
+  <resultCode>0</resultCode>
+  <resultMessage>SUCCESS</resultMessage>
+  <servId>WLF00003245</servId>
+  <servNm>국민취업지원제도</servNm>
+  <jurMnofNm>고용노동부</jurMnofNm>
+  <jurOrgNm>고용노동부 고용지원정책관</jurOrgNm>
+  <wlfareInfoOutlCn>저소득 구직자 등 취업취약계층에게 통합적인 취업지원서비스를 제공하고, 저소득 구직자에게는 최소한의 소득(구직촉진수당)을 지원하여 안정적인 구직활동과 생계를 함께 돕는 한국형 실업부조 제도입니다.</wlfareInfoOutlCn>
+  <tgtrDtlCn>15~69세 구직자 중 가구 소득·재산 요건을 충족하는 사람. Ⅰ유형(요건심사형·선발형)은 중위소득 60% 이하, 재산 4억원 이하 등 요건이 적용되며 프리랜서·특수고용 등 소득이 감소한 구직자도 신청할 수 있습니다.</tgtrDtlCn>
+  <slctCritCn>가구 단위 소득·재산 및 최근 취업경험 등을 기준으로 유형별 선정. 소득·재산 기준 충족 여부는 신청 후 고용센터의 자격심사로 확정됩니다.</slctCritCn>
+  <alwServCn>취업활동계획 수립, 직업훈련·일경험 등 취업지원서비스 제공. Ⅰ유형 대상자에게는 구직촉진수당(월 단위, 정해진 기간) 및 부양가족 추가수당을 지급할 수 있습니다.</alwServCn>
+  <aplyMtdCn>국민취업지원제도 누리집(work24.go.kr) 온라인 신청 또는 거주지 관할 고용센터 방문 신청. 신청 후 수급자격 결정과 취업활동계획 수립을 거쳐 지원이 시작됩니다.</aplyMtdCn>
+  <applmetList>
+    <servSeNm>온라인 신청</servSeNm>
+    <servSeDetailNm>국민취업지원제도 누리집 신청</servSeDetailNm>
+    <servSeDetailLink>https://www.work24.go.kr/kua/</servSeDetailLink>
+  </applmetList>
+  <applmetList>
+    <servSeNm>방문 신청</servSeNm>
+    <servSeDetailNm>거주지 관할 고용센터 방문</servSeDetailNm>
+    <servSeDetailLink>https://www.work24.go.kr/</servSeDetailLink>
+  </applmetList>
+  <inqplCtadrList>
+    <wlfareInfoDtlCd>고용노동부 상담센터</wlfareInfoDtlCd>
+    <inqDocCn>국번없이 1350</inqDocCn>
+  </inqplCtadrList>
+  <inqplCtadrList>
+    <wlfareInfoDtlCd>국민취업지원제도 안내</wlfareInfoDtlCd>
+    <inqDocCn>거주지 관할 고용센터</inqDocCn>
+  </inqplCtadrList>
+  <inqplHmpgReldList>
+    <wlfareInfoReldNm>국민취업지원제도 누리집</wlfareInfoReldNm>
+    <wlfareInfoReldCn>https://www.work24.go.kr/kua/</wlfareInfoReldCn>
+  </inqplHmpgReldList>
+  <basfrmList>
+    <servSeDetailNm>국민취업지원제도 수급자격 신청서</servSeDetailNm>
+    <servSeDetailLink>https://www.work24.go.kr/kua/</servSeDetailLink>
+  </basfrmList>
+  <rprsCtadr>1350</rprsCtadr>
+  <servDtlLink>https://www.work24.go.kr/kua/</servDtlLink>
+</wantedDtl>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wantedDtl>
+  <resultCode>0</resultCode>
+  <resultMessage>SUCCESS</resultMessage>
+  <servId>WLF00002000</servId>
+  <servNm>아이돌봄 서비스</servNm>
+  <jurMnofNm>여성가족부</jurMnofNm>
+  <jurOrgNm>여성가족부 가족문화과</jurOrgNm>
+  <wlfareInfoOutlCn>부모의 맞벌이·질병·한부모 등으로 양육 공백이 발생한 가정에 아이돌보미가 방문하여 만 12세 이하 아동을 돌봐주는 서비스입니다.</wlfareInfoOutlCn>
+  <tgtrDtlCn>만 12세 이하 아동을 둔 가정. 한부모·맞벌이 등 양육 공백 가정을 우선 지원하며, 소득 수준에 따라 정부 지원 비율이 달라집니다.</tgtrDtlCn>
+  <slctCritCn>가구 소득 수준(중위소득 기준)에 따라 가형~라형으로 구분하여 이용요금의 정부지원 비율을 차등 적용합니다.</slctCritCn>
+  <alwServCn>시간제·종일제 돌봄 서비스를 제공하며, 소득 구간에 따라 이용요금의 일부를 정부가 지원합니다.</alwServCn>
+  <aplyMtdCn>아이돌봄서비스 누리집 온라인 신청 또는 주소지 관할 주민센터에서 정부지원 자격 판정 신청.</aplyMtdCn>
+  <applmetList>
+    <servSeNm>온라인 신청</servSeNm>
+    <servSeDetailNm>아이돌봄서비스 누리집</servSeDetailNm>
+    <servSeDetailLink>https://www.idolbom.go.kr/</servSeDetailLink>
+  </applmetList>
+  <inqplCtadrList>
+    <wlfareInfoDtlCd>아이돌봄 대표전화</wlfareInfoDtlCd>
+    <inqDocCn>1577-2514</inqDocCn>
+  </inqplCtadrList>
+  <inqplHmpgReldList>
+    <wlfareInfoReldNm>아이돌봄서비스 누리집</wlfareInfoReldNm>
+    <wlfareInfoReldCn>https://www.idolbom.go.kr/</wlfareInfoReldCn>
+  </inqplHmpgReldList>
+  <rprsCtadr>1577-2514</rprsCtadr>
+  <servDtlLink>https://www.idolbom.go.kr/</servDtlLink>
+</wantedDtl>

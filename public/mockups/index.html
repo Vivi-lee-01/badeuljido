@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>받을지도 — 디자인 시안 비교</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+<style>
+  *{box-sizing:border-box;}
+  body{margin:0;background:#0f0f10;color:#f2f1ee;font-family:"Pretendard",system-ui,sans-serif;letter-spacing:-.012em;}
+  header{padding:32px 28px 8px;max-width:1300px;margin:0 auto;}
+  h1{font-size:30px;margin:0 0 6px;font-weight:800;}
+  .sub{color:#a3a19b;margin:0 0 4px;font-size:15px;}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:1300px;margin:0 auto;padding:20px 28px 60px;}
+  .cell{background:#1a1a1c;border:1px solid #2a2a2d;border-radius:16px;overflow:hidden;}
+  .cell .bar{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid #2a2a2d;}
+  .cell .t{font-weight:800;font-size:16px;}
+  .cell .d{color:#a3a19b;font-size:12.5px;margin-top:2px;}
+  .open{background:#fff;color:#111;border:none;border-radius:8px;padding:8px 14px;font:inherit;font-weight:700;font-size:13px;cursor:pointer;text-decoration:none;}
+  .frame{position:relative;height:420px;overflow:hidden;background:#fff;}
+  .frame iframe{position:absolute;top:0;left:0;width:200%;height:840px;border:0;transform:scale(.5);transform-origin:top left;}
+  .tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 8px;border-radius:100px;background:#2a2a2d;color:#cfcdc7;margin-left:8px;vertical-align:middle;}
+  @media(max-width:980px){.grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+  <header>
+    <h1>받을지도 · 디자인 시안 4종</h1>
+    <p class="sub">아래는 축소 미리보기입니다. 각 카드의 <b>전체 화면 열기</b>로 실제 크기에서 확인하세요. 가로 폭이 넓을수록 더 정확합니다.</p>
+  </header>
+  <div class="grid">
+    <div class="cell">
+      <div class="bar"><div><span class="t">1. Warm Civic</span><span class="tag">요청안</span><div class="d">굵은 공공 헤드라인 · 인간 사진 · 절제된 액센트 데이터 카드</div></div><a class="open" href="warm-civic.html" target="_blank">전체 화면 열기 ↗</a></div>
+      <div class="frame"><iframe src="warm-civic.html" scrolling="no"></iframe></div>
+    </div>
+    <div class="cell">
+      <div class="bar"><div><span class="t">2. Trust Gov Blue</span><div class="d">복지로/정부24 현대화 · 친근한 기관 블루 · 큰 접근성 타입</div></div><a class="open" href="trust-gov-blue.html" target="_blank">전체 화면 열기 ↗</a></div>
+      <div class="frame"><iframe src="trust-gov-blue.html" scrolling="no"></iframe></div>
+    </div>
+    <div class="cell">
+      <div class="bar"><div><span class="t">3. Soft Pastel Care</span><div class="d">크림+코랄/세이지 파스텔 · 둥근 톤 · 다정한 결</div></div><a class="open" href="soft-pastel-care.html" target="_blank">전체 화면 열기 ↗</a></div>
+      <div class="frame"><iframe src="soft-pastel-care.html" scrolling="no"></iframe></div>
+    </div>
+    <div class="cell">
+      <div class="bar"><div><span class="t">4. Editorial Mono+Accent</span><div class="d">고대비 모노 · 단일 핫 액센트 · 강한 명조 디스플레이 · 매거진</div></div><a class="open" href="editorial-mono.html" target="_blank">전체 화면 열기 ↗</a></div>
+      <div class="frame"><iframe src="editorial-mono.html" scrolling="no"></iframe></div>
+    </div>
+  </div>
+</body>
+</html>
