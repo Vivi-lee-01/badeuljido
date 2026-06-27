@@ -363,7 +363,7 @@ export default function Page() {
       />
 
       {screen === "input" && (
-        <div className="narrow">
+        <div className="hero-stage">
           <InputScreen
             input={input}
             setInput={setInput}
@@ -532,14 +532,17 @@ function InputScreen({
 }) {
   const disabled = input.trim().length < 10 || searching;
   return (
-    <section className="hero">
-      <div className="hero-card">
-        <img className="mascot" src="/badeuljido-logo.png" alt="받을지도 마스코트" />
+    <section className="hero-split">
+      <div className="hero-copy">
         <span className="eyebrow">받을지도 · 복지 길찾기</span>
-        <h1 className="hero-title serif">받을 수 있는지, 같이 찾아봐요</h1>
+        <h1 className="hero-title serif">
+          받을 수 있는지,
+          <br />
+          같이 찾아봐요
+        </h1>
         <p className="hero-sub">
-          제도명을 몰라도 괜찮아요. 지금 상황을 편하게 적어주시면, 받을 가능성이
-          있는 복지서비스를 AI가 추론해 찾아 신청 준비까지 도와드릴게요.
+          제도명을 몰라도 괜찮아요. 지금 상황을 적어주시면, 받을 가능성이 있는
+          복지서비스를 AI가 찾아 신청 준비까지 안내합니다.
         </p>
 
         <textarea
@@ -548,14 +551,6 @@ function InputScreen({
           value={input}
           onChange={(e) => setInput(e.target.value)}
         />
-
-        <div className="chips">
-          {EXAMPLES.map((ex, i) => (
-            <button key={i} className="chip" onClick={() => onExample(ex)}>
-              {i === 0 ? "예시 입력 (발표용)" : ex.slice(0, 16) + "…"}
-            </button>
-          ))}
-        </div>
 
         <button className="cta" disabled={disabled} onClick={onSearch}>
           {searching ? (
@@ -568,9 +563,45 @@ function InputScreen({
           )}
         </button>
 
+        <div className="chips">
+          {EXAMPLES.map((ex, i) => (
+            <button key={i} className="chip" onClick={() => onExample(ex)}>
+              {i === 0 ? "예시 입력 (발표용)" : ex.slice(0, 16) + "…"}
+            </button>
+          ))}
+        </div>
+
         <p className="privacy">
           입력하신 상황은 저장하지 않습니다. 주민번호·계좌번호 등 민감정보는 입력하지 마세요.
         </p>
+      </div>
+
+      <div className="hero-visual">
+        <img
+          className="hero-photo"
+          src="/people/ko-hero-woman.png"
+          alt="상황을 이야기하는 시민"
+        />
+        <div className="float-card one">
+          <div className="fc-top">
+            <span className="fc-rank" style={{ background: "var(--lav)" }}>1</span>
+            <span className="fc-name">국민취업지원제도</span>
+          </div>
+          <div className="fc-sub">고용노동부</div>
+          <span className="fc-pill" style={{ background: "var(--ok-bg)", color: "var(--ok)" }}>
+            지원 가능성 · 높음
+          </span>
+        </div>
+        <div className="float-card two">
+          <div className="fc-top">
+            <span className="fc-rank" style={{ background: "var(--berry)" }}>2</span>
+            <span className="fc-name">긴급복지지원</span>
+          </div>
+          <div className="fc-sub">보건복지부 · 생계비 신속 지원</div>
+          <span className="fc-pill" style={{ background: "var(--lav-soft)", color: "var(--lav)" }}>
+            신청 준비 완료까지
+          </span>
+        </div>
       </div>
     </section>
   );

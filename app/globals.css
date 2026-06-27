@@ -1,29 +1,29 @@
-/* 디자인 토큰 — refero 합성
-   기반(분위기): Tedy(파스텔 라벤더 캔버스 + 비비드 베리핑크 CTA + 둥근 알약 + 라이트 럭셔리 + 사람 온기)
-   귀여움 요소: Obscura(깜찍 마스코트 + 오렌지/스카이 플레이풀 포인트 + 떠 있는 소프트 카드)
-   브랜드: 받을지도 = 웃는 지도핀 마스코트 */
+/* 디자인 토큰 — 레이아웃 A: Refined Lavender Editorial
+   화이트 캔버스 + 절제된 바이올렛 프라이머리 + 인물 사진 온기 + 넉넉한 여백
+   (Tedy 기반의 라이트 럭셔리, 채도·장식 절제 → "AI 밤티" 제거) */
 :root {
   /* 표면 */
-  --canvas: #f7f4fd; /* 옅은 라벤더 화이트 */
+  --canvas: #ffffff; /* 클린 화이트 */
   --paper: #ffffff;
-  --lav-surface: #efeafe; /* 라벤더 틴트 블록 */
+  --lav-surface: #f5f2fe; /* 아주 옅은 라벤더 블록 */
   --vellum: #faf8ff;
 
   /* 액센트 */
-  --lav: #7c5cff; /* 라벤더/바이올렛 */
-  --lav-soft: #ece7fe;
-  --berry: #e8447f; /* 1순위 CTA — 비비드 베리핑크 */
+  --lav: #6d5efc; /* 프라이머리 — 바이올렛 */
+  --lav-soft: #efeafe;
+  --lav-hover: #5a47e0;
+  --berry: #e8447f; /* 세컨더리 포인트(링크·2순위 등 절제 사용) */
   --berry-soft: #fde4ee;
   --berry-hover: #d6356f;
-  --orange: #ff8a3d; /* 플레이풀 포인트 */
-  --sky: #39a7ff; /* 깜찍 스카이 */
+  --orange: #ff8a3d;
+  --sky: #39a7ff;
 
   /* 텍스트 */
-  --ink: #241f3a; /* 헤드라인 — 딥 플럼 잉크 */
-  --body: #4a4566; /* 본문 */
-  --muted: #8b86a3; /* 보조/플레이스홀더 */
-  --line: #e7e2f2;
-  --line-strong: #d8d1ec;
+  --ink: #1d1b32; /* 헤드라인 — 딥 잉크 */
+  --body: #56536e; /* 본문 */
+  --muted: #8e8aa3; /* 보조/플레이스홀더 */
+  --line: #eae6f6;
+  --line-strong: #e0d9f1;
 
   /* 지원 가능성 배지 */
   --ok: #1f9d6b;
@@ -33,16 +33,17 @@
   --low: #8b86a3;
   --low-bg: #efedf5;
 
-  /* 라운드 — 둥글둥글 */
+  /* 라운드 — 절제된 둥글기 */
   --r-btn: 999px;
-  --r-card: 22px;
-  --r-input: 16px;
+  --r-cta: 14px;
+  --r-card: 18px;
+  --r-input: 18px;
   --r-hero: 28px;
 
   /* 섀도 — 부드럽게 떠 있는 라벤더 */
-  --shadow-card: rgba(124, 92, 255, 0.1) 0px 6px 20px 0px;
-  --shadow-soft: rgba(124, 92, 255, 0.16) 0px 10px 30px 0px;
-  --shadow-cta: rgba(232, 68, 127, 0.32) 0px 8px 20px 0px;
+  --shadow-card: rgba(40, 30, 80, 0.07) 0px 6px 20px 0px;
+  --shadow-soft: rgba(40, 30, 80, 0.12) 0px 14px 36px 0px;
+  --shadow-cta: rgba(109, 94, 252, 0.28) 0px 8px 20px 0px;
   --shadow-nav: rgba(36, 31, 58, 0.14) 0px 4px 16px 0px;
 }
 
@@ -83,62 +84,97 @@ body {
   margin: 0 auto;
 }
 
-/* ───────── 깜찍 + 팬시 히어로 (라벤더 캔버스 + 마스코트) ───────── */
-.hero {
-  position: relative;
-  max-width: 680px;
+/* ───────── 레이아웃 A: 분할 히어로 (좌 카피 + 우 인물 사진/플로팅 카드) ───────── */
+.hero-stage {
+  max-width: 1120px;
   margin: 0 auto;
-  padding: 30px 0 6px;
-  text-align: center;
+}
+.hero-split {
+  display: grid;
+  grid-template-columns: 1.02fr 0.98fr;
+  gap: 56px;
+  align-items: center;
+  padding: 16px 0 30px;
   animation: fadeUp 0.4s ease both;
 }
-.hero-card {
-  max-width: 640px;
-  margin: 0 auto;
-}
-/* 마스코트 */
-.mascot {
-  width: 104px;
-  height: 104px;
-  margin: 0 auto 12px;
-  display: block;
-  object-fit: contain;
-  animation: bob 3s ease-in-out infinite;
-}
-@keyframes bob {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-7px); }
-}
+.hero-copy { text-align: left; }
 .eyebrow {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
   font-size: 12.5px;
   font-weight: 700;
   letter-spacing: 0.01em;
-  color: var(--berry);
-  background: var(--berry-soft);
-  border: 1px solid rgba(232, 68, 127, 0.18);
-  padding: 6px 14px;
+  color: var(--lav);
+  background: var(--lav-soft);
+  padding: 7px 14px;
   border-radius: var(--r-btn);
-  margin-bottom: 16px;
+  margin-bottom: 18px;
+}
+.eyebrow::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--lav);
 }
 .hero-title {
-  font-size: 46px;
-  line-height: 1.1;
-  margin: 0 0 14px;
+  font-size: 50px;
+  line-height: 1.08;
+  margin: 0 0 16px;
   color: var(--ink);
   font-weight: 800;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.04em;
 }
 .hero-sub {
   font-size: 16.5px;
   line-height: 1.6;
   color: var(--body);
-  margin: 0 auto 24px;
-  max-width: 520px;
+  margin: 0 0 24px;
+  max-width: 460px;
 }
-@media (max-width: 680px) {
-  .hero { padding: 18px 0 6px; }
-  .hero-title { font-size: 33px; }
+.hero-copy .chips { justify-content: flex-start; margin: 14px 0 0; }
+.hero-copy .privacy { margin-top: 18px; }
+
+/* 우측 비주얼 */
+.hero-visual { position: relative; }
+.hero-photo {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 28px;
+  background: linear-gradient(150deg, #ece6ff, #fbe4ef);
+  box-shadow: 0 30px 70px rgba(40, 30, 80, 0.16);
+}
+.float-card {
+  position: absolute;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 16px 40px rgba(40, 30, 80, 0.16);
+  padding: 14px 16px;
+  animation: fadeUp 0.5s ease both;
+}
+.float-card.one { top: 30px; left: -24px; width: 232px; }
+.float-card.two { bottom: 26px; right: -22px; width: 250px; animation-delay: 0.12s; }
+.fc-top { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.fc-rank {
+  width: 24px; height: 24px; border-radius: 8px;
+  color: #fff; font-weight: 800; font-size: 12px;
+  display: flex; align-items: center; justify-content: center; flex: none;
+}
+.fc-name { font-weight: 800; font-size: 14px; color: var(--ink); }
+.fc-sub { font-size: 12px; color: var(--muted); margin-bottom: 8px; }
+.fc-pill {
+  display: inline-block; font-size: 11.5px; font-weight: 700;
+  padding: 4px 10px; border-radius: 999px;
+}
+
+@media (max-width: 900px) {
+  .hero-split { grid-template-columns: 1fr; gap: 30px; }
+  .hero-title { font-size: 36px; }
+  .hero-photo { height: 340px; }
+  .float-card { display: none; }
 }
 
 /* 화면분할 워크스페이스 */
@@ -323,10 +359,10 @@ button.cta {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background: var(--berry);
+  background: var(--lav);
   color: #fff;
   border: none;
-  border-radius: var(--r-btn);
+  border-radius: var(--r-cta);
   font: inherit;
   font-size: 16px;
   font-weight: 700;
@@ -335,10 +371,10 @@ button.cta {
   box-shadow: var(--shadow-cta);
   transition: transform 0.08s ease, background 0.18s ease, box-shadow 0.18s ease;
 }
-button.cta:hover:not(:disabled) { background: var(--berry-hover); }
+button.cta:hover:not(:disabled) { background: var(--lav-hover); }
 button.cta:active:not(:disabled) { transform: translateY(1px); }
 button.cta:disabled {
-  background: #e7c4d4;
+  background: #cdc6f5;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -513,7 +549,7 @@ a.link:hover { color: var(--berry-hover); }
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: var(--berry);
+  background: var(--lav);
   color: #fff;
   font-size: 12px;
   font-weight: 800;

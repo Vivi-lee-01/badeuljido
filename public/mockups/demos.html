@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>받을지도 — 메인 페이지 데모 3종 (세련 + 사람 이미지)</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+<style>
+  *{box-sizing:border-box;}
+  body{margin:0;background:#0f0f10;color:#f2f1ee;font-family:"Pretendard",system-ui,sans-serif;letter-spacing:-.012em;}
+  header{max-width:1320px;margin:0 auto;padding:30px 26px 6px;}
+  h1{font-size:28px;margin:0 0 6px;font-weight:800;}
+  .sub{color:#a3a19b;margin:0;font-size:15px;}
+  .grid{max-width:1320px;margin:0 auto;padding:18px 26px 60px;display:grid;grid-template-columns:1fr;gap:24px;}
+  .cell{background:#1a1a1c;border:1px solid #2a2a2d;border-radius:16px;overflow:hidden;}
+  .bar{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid #2a2a2d;}
+  .t{font-weight:800;font-size:17px;}
+  .d{color:#a3a19b;font-size:13px;margin-top:2px;}
+  .open{background:#fff;color:#111;border:none;border-radius:8px;padding:9px 16px;font:inherit;font-weight:700;font-size:13px;cursor:pointer;text-decoration:none;}
+  .frame{position:relative;height:520px;overflow:hidden;background:#fff;}
+  .frame iframe{position:absolute;top:0;left:0;width:166.67%;height:866px;border:0;transform:scale(.6);transform-origin:top left;}
+</style>
+</head>
+<body>
+  <header>
+    <h1>받을지도 · 메인 페이지 데모 3종</h1>
+    <p class="sub">기준: <b>더 세련되게 + 사람 이미지 포함</b>. 마음에 드는 번호(또는 "A 레이아웃 + C 색")를 알려주세요.</p>
+  </header>
+  <div class="grid">
+    <div class="cell"><div class="bar"><div><span class="t">A. Refined Lavender</span><div class="d">절제된 라벤더 에디토리얼 · 분할 레이아웃 · 인물 사진 + 추천 결과 플로팅 미니카드</div></div><a class="open" href="demoA-refined-lavender.html" target="_blank">전체 화면 ↗</a></div><div class="frame"><iframe src="demoA-refined-lavender.html" scrolling="no"></iframe></div></div>
+    <div class="cell"><div class="bar"><div><span class="t">B. Warm Serif Care</span><div class="d">따뜻한 아이보리 · 우아한 명조 헤드라인 · 원형 인물 마스크가 떠다니는 케어 톤</div></div><a class="open" href="demoB-warm-serif-care.html" target="_blank">전체 화면 ↗</a></div><div class="frame"><iframe src="demoB-warm-serif-care.html" scrolling="no"></iframe></div></div>
+    <div class="cell"><div class="bar"><div><span class="t">C. Clean Premium</span><div class="d">미니멀 럭셔리 · near-white + 단일 딥틸 액센트 · 하단 풀폭 인물 밴드 (Linear/Apple 톤)</div></div><a class="open" href="demoC-clean-premium.html" target="_blank">전체 화면 ↗</a></div><div class="frame"><iframe src="demoC-clean-premium.html" scrolling="no"></iframe></div></div>
+  </div>
+</body>
+</html>
