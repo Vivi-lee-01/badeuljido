@@ -350,7 +350,8 @@ export default function Page() {
     }
   }
 
-  const wideClass = screen === "work" ? "wrap wide" : "wrap";
+  // 입력·워크스페이스 모두 넓은 컨테이너 사용 (입력 히어로가 좁아지지 않도록)
+  const wideClass = "wrap wide";
 
   return (
     <div className={wideClass}>

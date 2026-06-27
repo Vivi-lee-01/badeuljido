@@ -91,8 +91,8 @@ body {
 }
 .hero-split {
   display: grid;
-  grid-template-columns: 1.02fr 0.98fr;
-  gap: 56px;
+  grid-template-columns: 0.96fr 1.04fr;
+  gap: 52px;
   align-items: center;
   padding: 16px 0 30px;
   animation: fadeUp 0.4s ease both;
@@ -119,12 +119,13 @@ body {
   background: var(--lav);
 }
 .hero-title {
-  font-size: 50px;
-  line-height: 1.08;
+  font-size: 48px;
+  line-height: 1.1;
   margin: 0 0 16px;
   color: var(--ink);
   font-weight: 800;
   letter-spacing: -0.04em;
+  word-break: keep-all;
 }
 .hero-sub {
   font-size: 16.5px;
@@ -140,8 +141,9 @@ body {
 .hero-visual { position: relative; }
 .hero-photo {
   width: 100%;
-  height: 480px;
+  height: 520px;
   object-fit: cover;
+  object-position: center 22%;
   border-radius: 28px;
   background: linear-gradient(150deg, #ece6ff, #fbe4ef);
   box-shadow: 0 30px 70px rgba(40, 30, 80, 0.16);
@@ -153,10 +155,19 @@ body {
   border-radius: 18px;
   box-shadow: 0 16px 40px rgba(40, 30, 80, 0.16);
   padding: 14px 16px;
-  animation: fadeUp 0.5s ease both;
+  animation: floaty 4.5s ease-in-out infinite;
+  will-change: transform;
 }
-.float-card.one { top: 30px; left: -24px; width: 232px; }
-.float-card.two { bottom: 26px; right: -22px; width: 250px; animation-delay: 0.12s; }
+/* 얼굴(중앙)을 피해 바깥 모서리로 — 상단 좌측(머리 위) / 하단 우측(손 쪽) */
+.float-card.one { top: -14px; left: -40px; width: 216px; animation-delay: 0s; }
+.float-card.two { bottom: -14px; right: -34px; width: 238px; animation-delay: -2.25s; }
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-9px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .float-card { animation: none; }
+}
 .fc-top { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
 .fc-rank {
   width: 24px; height: 24px; border-radius: 8px;
